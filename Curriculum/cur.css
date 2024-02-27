@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1;
+}
+
+.h2 {
+    color: #000000d0;
+
+}
+
+h1 {
+    -webkit-text-fill-color: rgb(176, 181, 226);
+    -webkit-text-stroke: 2px black;
+}
+
+/* Body */
+
+.grid-container {
+    display: grid;
+    gap: 0px;
+    background-color: white;
+    padding: 10px;
+}
+
+.grid-item {
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
+
+/* Rows */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.cardright {
+    background-image: url(fondo2.jpg);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.cardleft {
+    background-image: url(fondo2.jpg);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.carda {
+    background-color: rgb(221, 223, 241);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+
+
+/* Leftrow */
+.item4 {
+    grid-column: 4;
+    grid-row: 3;
+    float: left;
+    width: 25%;
+
+}
+
+/* Rightrow */
+.item3 {
+    grid-column: 1 / span 3;
+    grid-row: 3;
+    float: right;
+    width: 75%;
+    padding-left: 20px;
+}
+
+/* Footer */
+.item5 {
+    grid-column: 1 / span 4;
+    grid-row: 4;
+    padding: 20px;
+    text-align: center;
+
+    background-image: url(fondo2.jpg);
+    margin-top: 20px;
+}
+
+
+
+/* media queries */
+@media screen and (max-width: 900px) {
+
+    .leftcolumn,
+    .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    img {
+        width: 100%;
+    }
+}
